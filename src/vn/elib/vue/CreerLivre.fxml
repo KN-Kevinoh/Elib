@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="359.0" prefWidth="768.0" style="-fx-background-color: #2e3131;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.elib.vue.CreerLivre">
+   <children>
+      <Pane prefHeight="584.0" prefWidth="841.0" style="-fx-background-color: #CCCCCC;">
+         <children>
+            <JFXTextField fx:id="isbn" focusColor="#3fc380" labelFloat="true" layoutX="80.0" layoutY="133.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="ISBN*" style="-fx-text-inner-color: #000000;">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="titre" focusColor="#3fc380" labelFloat="true" layoutX="80.0" layoutY="198.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Titre*" style="-fx-text-inner-color: #000000;">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="auteur" focusColor="#3fc380" labelFloat="true" layoutX="80.0" layoutY="268.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Auteur*" style="-fx-text-inner-color: #e8ecf #0000001;">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="editeur" focusColor="#3fc380" labelFloat="true" layoutX="81.0" layoutY="346.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Editeur*" style="-fx-text-inner-color: #000000;">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Pane layoutX="1.0" prefHeight="69.0" prefWidth="841.0" style="-fx-background-color: #944bea;">
+               <children>
+                  <FontAwesomeIconView glyphName="BOOK" layoutX="356.0" layoutY="48.0" size="40" text="" />
+                  <Label layoutX="406.0" layoutY="20.0" prefHeight="30.0" prefWidth="139.0" text="Nouveau Livre">
+                     <font>
+                        <Font name="Century Gothic" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#00000051" height="11.4" radius="2.35" width="0.0" />
+               </effect>
+            </Pane>
+            <JFXTextField fx:id="tome" focusColor="#3fc380" labelFloat="true" layoutX="447.0" layoutY="133.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Tome*" style="-fx-text-inner-color: #000000;">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="annee" focusColor="#3fc380" labelFloat="true" layoutX="447.0" layoutY="198.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Année*" style="-fx-text-inner-color: #000000;">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="page" focusColor="#3fc380" labelFloat="true" layoutX="447.0" layoutY="346.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Nombre page*" style="-fx-text-inner-color: #000000;">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="genre" layoutX="447.0" layoutY="271.0" prefHeight="26.0" prefWidth="293.0" promptText="Genre" style="-fx-fill: #000000;" />
+            <JFXButton buttonType="RAISED" layoutX="381.0" layoutY="468.0" onAction="#valider" ripplerFill="#2d17c3" style="-fx-background-color: #944bea;" text="Créer" textFill="#f2eeee">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="errorCreer" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="104.0" layoutY="424.0" prefHeight="38.0" prefWidth="634.0" textFill="#0c9e47">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

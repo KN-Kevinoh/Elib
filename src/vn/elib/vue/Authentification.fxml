@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1070.0" style="-fx-background-color: #2e3131;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.elib.vue.Authentification">
+   <children>
+      <Pane layoutX="533.0" prefHeight="590.0" prefWidth="535.0">
+         <children>
+            <MaterialDesignIconView fill="#ec644b" glyphName="LOCK_OPEN" layoutX="150.0" layoutY="176.0" size="40" text="" />
+            <JFXTextField fx:id="pseudoc" focusColor="#ec644b" focusTraversable="false" labelFloat="true" layoutX="124.0" layoutY="233.0" maxWidth="356.0" minWidth="279.0" prefHeight="36.0" prefWidth="307.0" promptText="Code carte" style="-fx-text-inner-color: #e8ecf1;">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="motpassc" focusColor="#ec644b" focusTraversable="false" labelFloat="true" layoutX="124.0" layoutY="294.0" maxWidth="356.0" minWidth="291.0" prefHeight="36.0" prefWidth="307.0" promptText="Code PIN" style="-fx-text-inner-color: #e8ecf1;">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton buttonType="RAISED" layoutX="114.0" layoutY="464.0" onAction="#Connecter" prefHeight="28.0" prefWidth="307.0" style="-fx-background-color: #EC644B;" text="Valider" textFill="#feffff">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="#ec644b" glyphName="USER" layoutX="99.0" layoutY="254.0" size="18" text="" />
+            <FontAwesomeIconView fill="#ec644b" glyphName="KEY" layoutX="98.0" layoutY="313.0" size="18" text="" />
+            <Label layoutX="196.0" layoutY="146.0" prefHeight="17.0" prefWidth="239.0" text="Authentification" textFill="#ec644b">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="messagec" alignment="CENTER" layoutX="52.0" layoutY="356.0" prefHeight="62.0" prefWidth="433.0" textAlignment="CENTER" textFill="#e83939" textOverrun="CLIP" />
+         </children>
+      </Pane>
+      <Pane fx:id="sld" prefHeight="590.0" prefWidth="535.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="590.0" fitWidth="535.0" opacity="0.65">
+               <image>
+                  <Image url="@../../../../images/lib.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="215.0" layoutY="14.0" text="Elib" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="Gentium Basic Bold Italic" size="68.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REFLECT" radius="0.5">
+                     <stops>
+                        <Stop color="#f25d0cf5" />
+                        <Stop color="#0a0a0a" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

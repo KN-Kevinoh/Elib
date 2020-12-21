@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="359.0" prefWidth="768.0" style="-fx-background-color: #2e3131;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.elib.vue.CreerExemplaire">
+   <children>
+      <Pane prefHeight="584.0" prefWidth="841.0" style="-fx-background-color: #cccccc;">
+         <children>
+            <JFXTextField fx:id="isbn" editable="false" focusColor="#09090a" labelFloat="true" layoutX="80.0" layoutY="87.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="ISBN">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="titre" editable="false" focusColor="#09090a" labelFloat="true" layoutX="80.0" layoutY="138.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Titre">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="auteur" editable="false" focusColor="#09090a" labelFloat="true" layoutX="80.0" layoutY="185.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Auteur">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="editeur" editable="false" focusColor="#09090a" labelFloat="true" layoutX="81.0" layoutY="235.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Editeur">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Pane layoutX="1.0" prefHeight="69.0" prefWidth="841.0" style="-fx-background-color: #944bea;">
+               <children>
+                  <FontAwesomeIconView glyphName="BOOK" layoutX="339.0" layoutY="45.0" size="40" text="" />
+                  <Label layoutX="388.0" layoutY="20.0" prefHeight="30.0" prefWidth="174.0" text="Liste Exemplaires">
+                     <font>
+                        <Font name="Century Gothic" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#00000051" height="11.4" radius="2.35" width="0.0" />
+               </effect>
+            </Pane>
+            <JFXTextField fx:id="tome" editable="false" focusColor="#09090a" labelFloat="true" layoutX="462.0" layoutY="87.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Tome">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="annee" editable="false" focusColor="#09090a" labelFloat="true" layoutX="462.0" layoutY="138.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Année">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="page" editable="false" focusColor="#09090a" labelFloat="true" layoutX="462.0" layoutY="235.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Nombre page">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="573.0" layoutY="489.0" onAction="#valider" ripplerFill="#2d17c3" style="-fx-background-color: #944bea;" text="Ajouter" textFill="#f2eeee">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="exemplaireTableau" layoutX="76.0" layoutY="317.0" onMouseClicked="#display" prefHeight="200.0" prefWidth="301.0" stylesheets="@tablefx.css">
+              <columns>
+                <TableColumn fx:id="rfid" prefWidth="195.0" text="RFID" />
+                <TableColumn fx:id="dispo" prefWidth="105.0" text="Disponible" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="supprimerB" buttonType="RAISED" disable="true" layoutX="661.0" layoutY="489.0" onAction="#supprimer" ripplerFill="#2d17c3" style="-fx-background-color: #944bea;" text="Supprimer" textFill="#f2eeee">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="genre" editable="false" focusColor="#09090a" labelFloat="true" layoutX="462.0" layoutY="185.0" maxWidth="293.0" minWidth="293.0" prefHeight="31.0" prefWidth="293.0" promptText="Genre">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

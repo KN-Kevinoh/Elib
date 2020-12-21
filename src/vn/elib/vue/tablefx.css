@@ -1,0 +1,11 @@
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #944bea;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #944bea;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
